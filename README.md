@@ -12,8 +12,8 @@
 - 💵 Cadastro de preços.
 - 📦 Cadastro de embalagens.
 - 🔄️ Sincronização de progresso das tarefas em rede local.
-- ⚛️ Cadastro de matérias primas e elementos compostos.
-- 🎯 Gestão de metas de cada matéria prima ou elemento composto em um produto.
+- ⚛️ Cadastro de matérias-primas e elementos compostos.
+- 🎯 Gestão de metas de cada matéria-prima ou elemento composto em um produto.
 - 💰 Custeio.
 - 🕶️ Visão geral para análise antes da ordem de produção.
 - ✅ Recomendações de dosagens para diferentes culturas de plantas.

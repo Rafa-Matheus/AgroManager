@@ -1,0 +1,11 @@
+<fields name="users" title="Usuários" primary="true">
+  <text name="user" title="Usuário" not_null="true"/>
+  <ptext name="password" title="Senha" not_null="true"/>
+  <sep title="Permissões" />
+  <chitems name="permissions" title="" >
+	<item title="Testar (Laboratório)" value="production"/>
+    <item title="Custear" value="cost"/>
+    <item title="Administrador" value="admin" />
+  </chitems>
+  <chitem title="" name="is_logged" visible="false"/>
+</fields>

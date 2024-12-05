@@ -1,0 +1,53 @@
+1) Descubra o IP do computador
+
+No MÁQUINA DO SERVIODOR, abra o Prompt de Comando (cmd) e digite:
+ipconfig
+
+Aperte enter
+
+Procure o Ipv4 que começa com 192.168.X.XXX
+
+2) Permita que conexões externas sejam feitas
+
+Na pasta "data" dentro da versão atual do Postgres localizada nos Arquivos de Programas
+estará o arquivo "postgresql.conf"
+
+Nele, adicione a linha da seguinte forma:
+
+listen_addresses = '*'
+
+3) Configure a autenticação
+
+Na mesma pasta anterior, agora abra o arquivo "pg_hba.conf"
+Coloque a seguinte linha:
+
+host all all 0.0.0.0/0 md5
+
+4) Certifique-se de que o Postgres possui permissões de firewall nas "Configurações avançadas de firewall"
+
+5) Certifique-se de que a senha de acesso ao banco de dados está correta, se não, para recuperar faça o seguinte
+
+No mesmo arquivo anterior, "pg_hba.conf" mude todas as últimas linha na coluna METHOD de "md5" para "trust"
+
+Reinicie o servidor, acesse o painel de controle dele, abra a tela de comando e digite isso:
+
+ALTER USER postgres WITH PASSWORD 'sua_nova_senha'
+
+6) Apague a última configuração de acesso dentro da pasta do AgroManager, esse é o arquivo "config"
+
+7) Acesse o AgroManager, ele irá pedir as informações de conexão com o servidor. Coloque o seguinte:
+
+IP: 192.168.X.XXX (passo 1)
+Porta: 5432
+Banco de dados: dbagromanager
+Usuário: postgres
+Senha: rafaeladmin (Última senha definida)
+
+6) Ao criar uma conta do zero no postgres, é necessário definir um administrador
+
+Indo na tabela 'users', defina um nome ('user'), senha ('password') e coluna 'permissions' deixar com o valor 1;1;1;1 para ter acesso total ao sistema
+
+Usuário já criado para administrar:
+
+Nome: admin
+Senha: admin2020

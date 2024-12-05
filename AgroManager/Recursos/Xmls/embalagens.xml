@@ -1,0 +1,8 @@
+<fields name="embalagens" title="Embalagens" primary="true">
+  <text name="nome" title="Nome" not_null="true"/>
+  <mtext name="description" title="Descrição" not_null="true"/>
+  <text name="dispenser" title="Distribuidor" not_null="true"/>
+  <mtext name="comment" title="Comentário"/>
+  <decimal name="count" title="Litros" />
+  <decimal name="cost" title="Custo" />
+</fields>

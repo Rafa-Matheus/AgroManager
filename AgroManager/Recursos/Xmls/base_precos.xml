@@ -1,0 +1,8 @@
+<fields name="base_precos" title="Base de Preços" primary="true">
+  <enum name="materia_prima" title="Matéria Prima" get_from="materia_prima:nome" not_null="true"/>
+  <mtext name="description" title="Descrição" not_null="true"/>
+  <text name="dispenser" title="Distribuidor" not_null="true"/>
+  <mtext name="comment" title="Comentário"/>
+  <decimal name="kilo_cost" title="Custo por Kilo" />
+  <date name="date" title="Data" />
+</fields>

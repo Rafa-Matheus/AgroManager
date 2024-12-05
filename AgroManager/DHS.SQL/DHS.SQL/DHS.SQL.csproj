@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A829E824-57C3-4FF5-828A-CA992B48AC48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DHS.SQL</RootNamespace>
+    <AssemblyName>DHS.SQL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\06 - Banco de Dados\PostgreSQLDataManager\PostgreSQLDataManager\bin\Debug\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\Best Projects\Matemática\Finance\Finance\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\SetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Forms\SetPasswordForm.designer.cs">
+      <DependentUpon>SetPasswordForm.cs</DependentUpon>
+    </None>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLAdapter.cs" />
+    <Compile Include="SQLCommandNotSupportedByAdapterException.cs" />
+    <Compile Include="SQLControlsHelper.cs" />
+    <Compile Include="SQLEnumItem.cs" />
+    <Compile Include="SQLField.cs" />
+    <Compile Include="SQLFieldBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SQLFieldBase.designer.cs">
+      <DependentUpon>SQLFieldBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLHelper.cs" />
+    <Compile Include="SQLParams.cs" />
+    <Compile Include="SQLProperty.cs" />
+    <Compile Include="SQLStruct.cs" />
+    <Compile Include="SQLTableActionHandler.cs" />
+    <Compile Include="SQLTableEventArgs.cs" />
+    <Compile Include="SQLViewsHelperBase.cs" />
+    <Compile Include="SQLXmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Forms\SetPasswordForm.resx">
+      <DependentUpon>SetPasswordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="SQLFieldBase.resx">
+      <DependentUpon>SQLFieldBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

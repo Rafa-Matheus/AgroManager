@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHS.SQL.SQLite", "DHS.SQL.SQLite\DHS.SQL.SQLite.csproj", "{BBDB248F-D874-4A41-86C3-32B00E753655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBDB248F-D874-4A41-86C3-32B00E753655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBDB248F-D874-4A41-86C3-32B00E753655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBDB248F-D874-4A41-86C3-32B00E753655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBDB248F-D874-4A41-86C3-32B00E753655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

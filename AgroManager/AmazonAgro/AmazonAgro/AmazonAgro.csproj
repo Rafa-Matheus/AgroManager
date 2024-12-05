@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A38F294-D6F4-4AD8-8E47-98F4208987AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AmazonAgro</RootNamespace>
+    <AssemblyName>AmazonAgro</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DHS.Printing">
+      <HintPath>..\..\DHS.Printing\DHS.Printing\bin\Release\DHS.Printing.dll</HintPath>
+    </Reference>
+    <Reference Include="DHS.SQL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DHS.SQL\DHS.SQL\bin\Release\DHS.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="DHS.SQL.PostgreSQL">
+      <HintPath>..\..\DHS.SQL.PostgreSQL\DHS.SQL.PostgreSQL\bin\Release\DHS.SQL.PostgreSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\DHS.SQL.PostgreSQL\DHS.SQL.PostgreSQL\bin\Release\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Recursos\APIs\Json120r3\Bin\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=4.0.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.4.0.1\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Binary.cs" />
+    <Compile Include="Blocks\BlockElement.cs" />
+    <Compile Include="Chemical\Culture.cs" />
+    <Compile Include="Chemical\Product.cs" />
+    <Compile Include="CustomViews\BlockElementView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\BlockElementView.Designer.cs">
+      <DependentUpon>BlockElementView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\BlockField.cs" />
+    <Compile Include="Blocks\BlockStyles.cs" />
+    <Compile Include="Chemical\Element.cs" />
+    <Compile Include="CustomViews\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomViews\CustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomViews\NavigationButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomViews\TopToolsBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomViews\TopToolsButtonSides.cs" />
+    <Compile Include="DragAndDropSupport.cs" />
+    <Compile Include="DrawUtil.cs" />
+    <Compile Include="Forms\Costing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Costing.Designer.cs">
+      <DependentUpon>Costing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateBackupCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateBackupCopy.Designer.cs">
+      <DependentUpon>CreateBackupCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ComposeMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ComposeMaterials.designer.cs">
+      <DependentUpon>ComposeMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditElements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditElements.designer.cs">
+      <DependentUpon>EditElements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputName.designer.cs">
+      <DependentUpon>InputName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Goals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Goals.Designer.cs">
+      <DependentUpon>Goals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputPassword.Designer.cs">
+      <DependentUpon>InputPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LeafAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LeafAnalysis.Designer.cs">
+      <DependentUpon>LeafAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LeafSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LeafSearch.Designer.cs">
+      <DependentUpon>LeafSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Materials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Materials.designer.cs">
+      <DependentUpon>Materials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Overview.Designer.cs">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Search.designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chemical\PeriodicTable.cs" />
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Process.cs" />
+    <Compile Include="Management\ProcessManager.cs" />
+    <Compile Include="Management\ProcessWatcher.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPage.cs" />
+    <Compile Include="ReportItem.cs" />
+    <Compile Include="SQL\SQLControlField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SQL\SQLControlField.Designer.cs">
+      <DependentUpon>SQLControlField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQL\SQLControls.cs" />
+    <Compile Include="SQL\SQLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQL\SQLForm.designer.cs">
+      <DependentUpon>SQLForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\UserManager.cs" />
+    <Compile Include="SQL\PostgreSQLSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQL\PostgreSQLSetup.Designer.cs">
+      <DependentUpon>PostgreSQLSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="CustomViews\BlockElementView.resx">
+      <DependentUpon>BlockElementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Costing.resx">
+      <DependentUpon>Costing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateBackupCopy.resx">
+      <DependentUpon>CreateBackupCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ComposeMaterials.resx">
+      <DependentUpon>ComposeMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditElements.resx">
+      <DependentUpon>EditElements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputName.resx">
+      <DependentUpon>InputName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Goals.resx">
+      <DependentUpon>Goals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputPassword.resx">
+      <DependentUpon>InputPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LeafAnalysis.resx">
+      <DependentUpon>LeafAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LeafSearch.resx">
+      <DependentUpon>LeafSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Materials.resx">
+      <DependentUpon>Materials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Overview.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQL\SQLControlField.resx">
+      <DependentUpon>SQLControlField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQL\SQLForm.resx">
+      <DependentUpon>SQLForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQL\PostgreSQLSetup.resx">
+      <DependentUpon>PostgreSQLSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+    <None Include="Resources\clean.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\elements.png" />
+    <None Include="Resources\open.png" />
+    <None Include="Resources\packs.png" />
+    <None Include="Resources\remove_all.png" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\print.png" />
+    <Content Include="icon.ico" />
+    <None Include="Resources\pricing.png" />
+    <Content Include="logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\leaf.png" />
+    <Content Include="tables\base_precos.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tables\clientes.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tables\elemento_composto.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tables\materia_prima.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tables\embalagens.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tables\users.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

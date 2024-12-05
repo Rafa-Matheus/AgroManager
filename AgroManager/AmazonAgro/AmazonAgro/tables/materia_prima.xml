@@ -1,0 +1,4 @@
+<fields name="materia_prima" title="Matérias Primas" primary="true">
+  <text name="nome" title="Nome" not_null="true"/>
+  <text name="nutrientes" title="Nutrientes" not_null="true"/>
+</fields>

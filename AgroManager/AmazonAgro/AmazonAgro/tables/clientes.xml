@@ -1,0 +1,7 @@
+<fields name="clientes" title="Clientes" primary="true">
+  <text name="nome" title="Nome/Responsável" not_null="true"/>
+  <text name="razao_social" title="Razão Social" not_null="true"/>
+  <mask name="cnpj" title="CNPJ" mask="00.000.000/0000-00" />
+  <mask name="telefone" title="Telefone" mask="(00) 00000-0000" />
+  <text name="email" title="Email" not_null="true"/>
+</fields>

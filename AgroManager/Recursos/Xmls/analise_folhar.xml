@@ -1,0 +1,6 @@
+<fields name="analise_folhar" title="Análise Folhar" primary="true">
+  <text name="elemento" title="Elemento" not_null="true"/>
+  <decimal name="teor" title="Teor" not_null="true"/>
+  <decimal name="min" title="Teor Mínimo" not_null="true"/>
+  <decimal name="max" title="Teor Máximo" not_null="true"/>
+</fields>

@@ -1,0 +1,3 @@
+<fields name="elemento_composto" title="Elementos Compostos" primary="true">
+  <text name="formula" title="Fórmula" not_null="true"/>
+</fields>

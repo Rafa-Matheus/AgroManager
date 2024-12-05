@@ -1,0 +1,6 @@
+<fields name="clientes" title="Clientes" primary="true">
+  <text name="nome" title="Nome" not_null="true"/>
+  <text name="sobrenome" title="Sobrenome" not_null="true"/>
+  <mask name="cnpj" title="CNPJ" mask="00.000.000/0000-00" />
+  <mask name="telefone" title="Telefone" mask="(00) 0000-0000" />
+</fields>

@@ -23,8 +23,8 @@
 
 #### Descrição do Projeto
 
-O **AgroManager** é uma ferramenta voltada para a produção de fertilizantes, com foco na recomendação de dosagens para diferentes culturas de plantas. O principal objetivo é **otimizar os resultados nas plantações.**
+O **AgroManager** é uma ferramenta voltada para a gestão da cadeia de produção de fertilizantes, com foco na recomendação de dosagens para diferentes culturas.
 
-O software permite o cadastro de matérias-primas, elementos compostos, impressão de relatórios, além de oferecer uma visão geral antes da produção.
+O software permite o cadastro de matérias-primas, elementos compostos, impressão de relatórios, além de oferecer uma visão prévia geral da produção.
 
-O progresso da sequência de passos é sincronizada em rede local. Ou seja, cada usuário logado saberá em qual estágio o sistema está, em tempo real. Isso facilita a gestão e o controle da produção.
+O progresso da sequência de passos é sincronizada em rede local, de modo que cada usuário logado saberá em qual estágio a produção está, em tempo real, facilitando a gestão e o controle da produção.
